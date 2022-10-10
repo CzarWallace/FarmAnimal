@@ -1,19 +1,19 @@
-package edu.ggc.itec.AWallace;
+package Exercises;
 
-public abstract class Chicken extends FarmAninal{
-	
+public class Chicken extends FarmAnimal {
+	// attribute for chicken class
 	private String sound;
 
-	public Chicken(String name, FarmAninal.Gender gender, double weight, int age) {
-		super(name, gender, weight,age);
-		
-		if(gender == Gender.FEMALE)
-		sound = "Click Click";
+	public Chicken(String name, FarmAnimal.Gender gender, double weight, int age) {
+		super(name, gender, weight, age);
+		if (gender == gender.Male)
+			sound = "Cock-a-Doodle-doo";
 		else
-			sound = "Cock-a-Doodle-do";
+			sound = "Cluck Cluck";
+
 	}
-	
-	
+
+	// getter and setter
 	public String getSound() {
 		return sound;
 	}
@@ -21,20 +21,15 @@ public abstract class Chicken extends FarmAninal{
 	public void setSound(String sound) {
 		this.sound = sound;
 	}
-	
-	 @Override
-		public  String feedLoadingSchedule() {
-			return "8 am - 4 pm";
-			
-		
+
+	public String feedLoadingSchedule() {
+		return "8 am - 4 pm";
 	}
-	 @Override
-		public String toString() {
-			return "Chicken" + sound + super.toString();
-		}
 
+	// toString method
+	public String toString() {
+		return "Chicken " + sound + super.toString();
 
-	
-	
-      
+	}
+
 }
